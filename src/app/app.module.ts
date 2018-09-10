@@ -7,11 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import {HttpClientModule} from "@angular/common/http";
+import {ListTiporequisitoPage} from "../pages/list-tiporequisito/list-tiporequisito";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ListTiporequisitoPage,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,8 @@ import {HttpClientModule} from "@angular/common/http";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ListTiporequisitoPage,
   ],
   providers: [
     StatusBar,

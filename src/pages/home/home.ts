@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
+import {ListTiporequisitoPage} from '../list-tiporequisito/list-tiporequisito'
 import {TipoRequisito} from "../../modelo/TipoRequisito";
 import {HttpClient} from '@angular/common/http';
 @Component({
@@ -7,17 +8,10 @@ import {HttpClient} from '@angular/common/http';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  constructor(public navCtrl: NavController) {
 
-  public tiporequisito:TipoRequisito[];
-  constructor(public navCtrl: NavController, public navParams: NavParams, private _http:HttpClient) {
-    this._http.get<TipoRequisito[]>('/api/GenericRestService/rest/querytojson/LISTTIPOREQUISITO/null')
-      .subscribe(
-        (tiporequisito)=>{
-          console.log(tiporequisito);
-          this.tiporequisito=tiporequisito;
-        }
-      );
-  //  this.tiporequisito=[{codtipreq:1,nomtipreq:'requisito 1' },{codtipreq:2, nomtipreq:'requisito2'}];
   }
-
+  tipoRequisito(){
+    this.navCtrl.push(ListTiporequisitoPage);
+  }
 }

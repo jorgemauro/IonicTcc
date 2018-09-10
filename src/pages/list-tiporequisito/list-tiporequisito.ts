@@ -17,9 +17,10 @@ import {TipoRequisito} from "../../modelo/TipoRequisito";
 export class ListTiporequisitoPage {
 public tiporequisito:TipoRequisito[];
   constructor(public navCtrl: NavController, public navParams: NavParams, private _http:HttpClient) {
-    this._http.get<TipoRequisito[]>('http://camerascasas.no-ip.info:8085/GenericRestService/rest/querytojson/LISTTIPOREQUISITO/null')
+    this._http.get<TipoRequisito[]>('/api/GenericRestService/rest/querytojson/LISTTIPOREQUISITO/null')
       .subscribe(
         (tiporequisito)=>{
+          console.log(tiporequisito);
           this.tiporequisito=tiporequisito;
         }
       );
