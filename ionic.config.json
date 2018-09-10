@@ -3,5 +3,10 @@
   "integrations": {
     "cordova": {}
   },
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://camerascasas.no-ip.info:8085"
+    }]
 }
